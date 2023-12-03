@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Pop Quiz</title>
+    <link rel="stylesheet" href="./assets/reset.css"/>
+    <link rel="stylesheet" href="./assets/style.css"/>
+</head>
+<body>
+    <header>
+        <!-- the header card will contain the high score check and the timer -->
+        <div id="headerCard">
+            <h1 id="highscore">Check Out Previous Highscore</h1>
+            <h1>Timer: <span id="timer:">0</span></h1>
+        </div>  
+    </header>
+    <main>
+        <!-- quiz cards will be centered with a drop shadow and rounded corners -->
+        <div class="quizCard">
+
+            <!-- start of the questionnaire -->
+            <div id="startQuiz">
+                <h1 class="title">Coding Quiz Challenge</h1>
+                <p class="questionnaire">Welcome to the end of Week 4! We covered a lot of topics up until now. Let's see how much you remember. Press start to begin the quiz!</p>
+                <button class="interactiveBtn" id="startBtn">Start</button>
+            </div>
+
+            <!-- test section -->
+            <div id="testContent">
+                <!-- content for quiz goes here -->
+                <h1 id="questionNumber"></h1>
+                <!-- question is displayed here -->
+                <p id="theQuestion"></p>
+                <p id="theChoices"></p>
+                <!-- 5 questions -->
+                <button class="interactiveBtn" id="answer_one"></button>
+                <button class="interactiveBtn" id="answer_two"></button>
+                <button class="interactiveBtn" id="answer_three"></button>
+                <button class="interactiveBtn" id="answer_four"></button>
+                <p id="answerCheck"></p>
+            </div>
+
+            <!-- enter highscore section -->
+            <div id="scoreSig">
+                <!-- enter and submit signature -->
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
+
+
+<!-- psuedo code -->
+<!-- 
+    <header top left> Click here to see high scores <> 
+    <header top right> timer counting down from 30s <> 
+    
+    <body> quiz cards will rotate out on button clicks
+    each new card will have a question and 4 answers, only the correct answer will cycle the card
+    wrong answers will reveal a hidden paragraph that says the user got it wrong
+    at the end of the quiz the user will enter their initials to have it stored that the code can retrieve and return to the user
+    a button to clear scores will clear all stored scores
+    a button to do the quiz again
+
+
+    changing quiz containers: 
+    if (start is pressed) {
+        hide current div container
+        show new div container
+    }
+
+    answering questions: 
+    if (button clicked is incorrect){
+        show <p> Wrong! 
+    } else { 
+        move to next question
+    }
+    
+    moving to next question will require appending existing data in the H1, P and button tags
+
+
+    programming the buttons 
+
+  When user clicks interactiveBtn 
+  we will check if the value assigned to that button is true
+ -->
