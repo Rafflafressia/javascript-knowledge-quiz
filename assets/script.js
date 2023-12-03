@@ -30,7 +30,36 @@ var qcOne = {
     D: false
 }
 
-choiceOne = qcOne.A
+var qcTwo = {
+    A: false,
+    B: true, 
+    C: false, 
+    D: false
+}
+
+var qcThree = {
+    A: false,
+    B: false, 
+    C: true, 
+    D: false
+}
+
+var qcFour = {
+    A: true,
+    B: false, 
+    C: false, 
+    D: false
+}
+
+var qcFive = {
+    A: false,
+    B: false, 
+    C: false, 
+    D: true
+}
+correctAnswers = [qcOne.A, qcTwo.B, qcThree.C, qcFour.A, qcFive.D];
+
+
 
 //start the quiz - show question 1
 start.addEventListener("click", function(){
@@ -43,7 +72,7 @@ start.addEventListener("click", function(){
 
 // Question 1
 answerBtn.addEventListener("click", function(){
-    if (choiceOne === true ) {
+    if (interactiveBtn === true ) {
         checkAnswer.textContent = "Correct!"
     } else{
         checkAnswer.textContent = "Incorrect!"
