@@ -12,12 +12,12 @@
         <!-- the header card will contain the high score check and the timer -->
         <div id="headerCard">
             <h1 id="highscore">Check Out Previous Highscore</h1>
-            <h1>Timer: <span id="timer:">0</span></h1>
+            <h1>Timer: <span id="timerEl"></span></h1>
         </div>  
     </header>
     <main>
         <!-- quiz cards will be centered with a drop shadow and rounded corners -->
-        <div class="quizCard">
+        <section class="quizCard">
 
             <!-- start of the questionnaire -->
             <div id="startQuiz">
@@ -27,64 +27,32 @@
             </div>
 
             <!-- test section -->
-            <div id="testContent">
+            <div class="testContent">
                 <!-- content for quiz goes here -->
                 <h1 id="questionNumber"></h1>
                 <!-- question is displayed here -->
                 <p id="theQuestion"></p>
                 <p id="theChoices"></p>
-                <!-- 5 questions -->
-                <button class="interactiveBtn" id="answerBtn1"></button>
-                <button class="interactiveBtn" id="answerBtn2"></button>
-                <button class="interactiveBtn" id="answerBtn3"></button>
-                <button class="interactiveBtn" id="answerBtn4"></button>
+                <!-- answer buttons -->
+                <button class="interactiveBtn choices" id="answerBtn1"></button>
+                <button class="interactiveBtn choices" id="answerBtn2"></button>
+                <button class="interactiveBtn choices" id="answerBtn3"></button>
+                <button class="interactiveBtn choices" id="answerBtn4"></button>
                 <p id="answerCheck"></p>
             </div>
 
             <!-- enter highscore section -->
-            <div id="scoreSig">
+            <form id="scoreSig">
                 <!-- enter and submit signature -->
-            </div>
+                <h1 id="initials">Add Your Initials Here:</h1>
+                <input type="text" id="signature">
+                <button class="interactiveBtn choices" id="submit">Submit</button>
+                <button class="interactiveBtn" id="startBtn">Retry</button>
+            </form>
 
-        </div>
+        </section>
     </main>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
-
-
-<!-- psuedo code -->
-<!-- 
-    <header top left> Click here to see high scores <> 
-    <header top right> timer counting down from 30s <> 
-    
-    <body> quiz cards will rotate out on button clicks
-    each new card will have a question and 4 answers, only the correct answer will cycle the card
-    wrong answers will reveal a hidden paragraph that says the user got it wrong
-    at the end of the quiz the user will enter their initials to have it stored that the code can retrieve and return to the user
-    a button to clear scores will clear all stored scores
-    a button to do the quiz again
-
-
-    changing quiz containers: 
-    if (start is pressed) {
-        hide current div container
-        show new div container
-    }
-
-    answering questions: 
-    if (button clicked is incorrect){
-        show <p> Wrong! 
-    } else { 
-        move to next question
-    }
-    
-    moving to next question will require appending existing data in the H1, P and button tags
-
-
-    programming the buttons 
-
-  When user clicks interactiveBtn 
-  we will check if the value assigned to that button is true
- -->
